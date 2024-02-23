@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Aliexpress de Aliexpress
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En esta práctica vamos a servirnos de todos los conceptos que hemos visto estas semanas. La práctica tiene como resultado visual el siguiente producto:
 
-## Available Scripts
+Vamos a servirnos de Figma para crear este [Aliexpress de Aliexpress](https://www.figma.com/file/ALb5IOOya4y3mXjnYLKcSu/Untitled?type=design&node-id=0%3A1&mode=design&t=ro78746AtzLRQbB0-1)
 
-In the project directory, you can run:
+Como es apreciable en la página, nuestro producto consiste en un listado de productos en forma de cards. Vamos a analizar este producto parte por parte para que el ejercicio sea más sencillo de llevar a cabo.
 
-### `npm start`
+![Untitled](https://res.cloudinary.com/dagndlfhj/image/upload/v1708703783/AliExpress_nyxopa.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instrucciones
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1 - Listado de productos:
 
-### `npm test`
+La primera parte de nuestro lab es un simple listado de productos. Partiendo de el archivo de `products.json` que se aporta en el proyecto, crea un listado de todos los productos con sus correspondientes datos: _título, descripción, precio, imagen_. Para llevar a cabo esta primera parte no se necesita añadir NINGÚN estilo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2 - Eliminación de productos:
 
-### `npm run build`
+Cada producto tiene que tener asociado un botón de eliminación. Este botón nos tiene que permitir eliminar el producto en cuestión del listado filtrado de productos. Evidentemente, esta eliminación CARECE de permanencia. Si refrescamos la página, nuestro producto se verá de nuevo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3 - Ver más:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Al final del listado de productos se encuentra un botón de “Ver más”. Inicialmente, queremos mostrar únicamente 6 productos en nuestra página. Al clickar este botón, deberían aparecer el resto de productos en la página.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4 - (BONUS) Maquetación:
 
-### `npm run eject`
+Maqueta cada componente tal y como se muestra en el Figma adjunto.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 5 - (BONUS) Filtrado de productos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Al comienzo de nuestra página contamos con una barra de búsqueda. Esta barra de búsqueda actúa como una barra de filtrado por nombre. Cuando escribamos un texto, se deberían mostrar en pantalla aquellos productos cuyo título COMIENCE por las mismas letras que se están escribiendo. Ejemplo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Títulos de productos: [”Pistola de agua”, “Ratón gamer”, “Pelota goma”].
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Input: “P” , Output: [”Pistola de agua”, “Pelota goma”]
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Input: “Pi”, Output: [”Pistola de agua”]
